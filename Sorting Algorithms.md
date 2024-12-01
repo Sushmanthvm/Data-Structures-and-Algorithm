@@ -1,10 +1,4 @@
-
-
-# Notes for Data Structures
-
-  
-
-## Sorting Algorithms
+# Sorting Algorithms
 - [x] Selection Sort
 - [x] Bubble Sort
 - [x] Insertion Sort 
@@ -60,8 +54,6 @@ Initial Array:
 | Pass 5   | 9, ***13***, ***20***, ***24***, ***46***, ***52***| 0 → N-5              |          
 
 
----
-
 **Pass 1:**  
 | Step | Compare       | Action         | Result               |
 |------|---------------|----------------|----------------------|
@@ -71,7 +63,6 @@ Initial Array:
 | 4    | 50 and 20     | Swap           | 13, 24, 46, ***20***, ***50***, 9 |
 | 5    | 50 and 9      | Swap           | 13, 24, 46, 20, ***9***, ***50*** |
 
----
 
 **Pass 2:**
 | Step | Compare       | Action         | Result               |
@@ -82,7 +73,6 @@ Initial Array:
 | 4    | 46 and 9      | Swap           | 13, 24, 20, ***9***, ***46***, 50 |
 
 
----
 
 **Pass 3:**
 | Step | Compare       | Action         | Result               |
@@ -91,7 +81,7 @@ Initial Array:
 | 2    | 24 and 20     | Swap           | 13, ***20***, ***24***, 9, 46, 50 |
 | 3    | 24 and 9      | Swap           | 13, 20, ***9***, ***24***, 46, 50 |
 
----
+
 
 **Pass 4:**
 | Step | Compare       | Action         | Result               |
@@ -99,13 +89,12 @@ Initial Array:
 | 1    | 13 and 20     | No Swap        | 13, 20, 9, 24, 46, 50 |
 | 2    | 20 and 9      | Swap           | 13, ***9***, ***20***, 24, 46, 50 |
 
----
+
 **Pass 5:**
 | Step | Compare       | Action         | Result               |
 |------|---------------|----------------|----------------------|
 | 1    | 13 and 9      | Swap           | ***9***, ***13***, 20, 24, 46, 50 |
 
----
 
 **Final Sorted Array:**  
 | 9 | 13 | 20 | 24 | 46 | 50 |
