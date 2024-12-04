@@ -125,14 +125,14 @@ Initial Array:
 |----|-----|-----|----|-----|---|
 <br>
 
-| **Step** | **Array State**             | **Action**                                             |
-|----------|------------------------------|---------------------------|
-| Initial  | [ 13, 46, 24, 50, 20, 9 ]   | Start with the first element (13), it's already sorted. |
-| Step 1   | [ 13, 46, 24, 50, 20, 9 ]   | 46 is already in its correct position.                |
-| Step 2   | [ 13, ***24***, 46, 50, 20, 9 ]   | Insert 24 into its correct position (swap with 46).   |
-| Step 3   | [ 13, 24, 46, 50, 20, 9 ]   | 50 is already in its correct position.                |
-| Step 4   | [ 13, ***20***, 24, 46, 50, 9 ]   | Insert 20 into its correct position (swap with 24, 46). |
-| Step 5   | [ ***9***, 13, 20, 24, 46, 50 ]   | Insert 9 into its correct position (swap with all elements before it). |
+| **Step** | **Array State**             | **Action**             | **Comparison Range in each step**	|
+|----------|------------------------------|----------------------------------------------------------------------------	|-------|
+| Initial  | [ 13, 46, 24, 50, 20, 9 ]   | Start with the first element (13), it's already sorted. 			| 1 → 0 |
+| Step 1   | [ 13, 46, 24, 50, 20, 9 ]   | 46 is already in its correct position.                			| 2 → 0 |
+| Step 2   | [ 13, ***24***, 46, 50, 20, 9 ]   | Insert 24 into its correct position (swap with 46).   			| 3 → 0 |
+| Step 3   | [ 13, 24, 46, 50, 20, 9 ]   | 50 is already in its correct position.                			| 4 → 0 |
+| Step 4   | [ 13, ***20***, 24, 46, 50, 9 ]   | Insert 20 into its correct position (swap with 24, 46). 		| 5 → 0 |
+| Step 5   | [ ***9***, 13, 20, 24, 46, 50 ]   | Insert 9 into its correct position (swap with all elements before it). | 6 → 0 |
 
 ---
 **Final Sorted Array:** 
@@ -145,7 +145,7 @@ def insertionSort(self, arr):
 	#code here
 	for i in range(0,len(arr)):
 	    j=i
-	    while j>0 and arr[j-1]>arr[j]:
+	    while j>0 and arr[j-1]>arr[j]: # i --> 0 remeber that this loops goes form i to 0 for every ith iteration
 	        temp = arr[j-1]
 	        arr[j-1]=arr[j]
 	        arr[j]=temp
@@ -154,6 +154,12 @@ def insertionSort(self, arr):
 
 ```
  >  :memo: **Time complexity** for the algorithm : O(n^2^)
+
+---
+
+### 4.Merge Sort
+
+<img src="../asset/merge.gif" width="1000" height="300">
 
 
 
